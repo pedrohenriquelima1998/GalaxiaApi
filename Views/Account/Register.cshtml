@@ -1,0 +1,33 @@
+﻿@model GalaxiaApi.ViewModels.RegisterViewModel
+
+@{
+    ViewData["Title"] = "Register";
+}
+
+<h1>Registrar Novo Usuário</h1>
+<form asp-controller="Account" asp-action="Register" method="post">
+    <table>
+        <tr>
+            <td><label asp-for="Username"></label></td>
+            <td><input asp-for="Username" /></td>
+        </tr>
+        <tr>
+            <td><label asp-for="Password"></label></td>
+            <td><input asp-for="Password" /></td>
+        </tr>
+        <tr>
+            <td><label asp-for="ConfirmPassword"></label></td>
+            <td><input asp-for="ConfirmPassword" /></td>
+        </tr>
+        <tr>
+            <td><label asp-for="Email"></label></td>
+            <td><input asp-for="Email" /></td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <input type="submit" value="Registrar" />
+            </td>
+        </tr>
+    </table>
+    <div asp-validation-summary="All"></div>
+</form>
